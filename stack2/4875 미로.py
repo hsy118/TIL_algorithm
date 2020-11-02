@@ -26,11 +26,10 @@ for tc in range(1, T+1):
     N = int(input())
     maze = [input() for _ in range(N)]
     v = [[0] *N for _ in range(N)]
-    starti = 0
-    startj = 0
     for i in range(N):
         for j in range(N):
             if maze[i][j] == '2':
                 starti, startj = i, j
     #f(starti, startj, N)
-    print(f'#{tc} {f1(starti, startj, N)}')
+    result = f1(starti, startj, N)
+    print("#{} {}".format(tc, result))
